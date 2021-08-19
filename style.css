@@ -36,18 +36,18 @@ html {
 body {
   font-family: var(--font-lexend);
   font-size: 0.9375rem;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 /* make footer stick to bottom */
 
 main {
   min-height: 100%;
-  margin-bottom: 1.5625rem;
+  margin-bottom: -1.5625rem;
 }
 
 .footer, .push {
-  max-height: 1.5625rem;
+  height: 1.5625rem;
 }
 
 /* flex class */
@@ -133,5 +133,21 @@ button:hover {
 
   .flex {
     flex-wrap: nowrap;
+  }
+
+  section {
+    max-width: 70%;
+  }
+
+  article {
+    min-height: 100%;
+  }
+
+  article:first-child {
+    border-radius: .3125rem 0 0 .3125rem;
+  }
+
+  article:last-child {
+    border-radius: 0 .3125rem .3125rem 0;
   }
 }
