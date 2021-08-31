@@ -1,0 +1,140 @@
+:root {
+  /* fonts */
+  --font-lexend: "Lexend Deca", sans-serif;
+  --font-big-shoulders: "Big Shoulders display", cursive;
+  /* colors */
+  /* primary */
+  --clr-bright-orange: hsl(31, 77%, 53%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-vry-dark-cyan: hsl(179, 100%, 13%);
+  /* neutral */
+  --clr-para-white: hsla(0, 0%, 100%, 0.75);
+  --clr-heading-gray: hsl(0, 0%, 95%);
+}
+
+/* base */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-lexend);
+  font-size: 0.9375rem;
+  height: 100vh;
+}
+
+/* make footer stick to bottom */
+main {
+  min-height: 100%;
+  margin-bottom: -1.5625rem;
+}
+
+.footer, .push {
+  height: 1.5625rem;
+}
+
+/* flex class */
+.br {
+  border: red 2px solid;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex > * {
+  flex-basis: 100%;
+}
+
+/*  */
+section {
+  max-width: 88%;
+}
+
+article {
+  padding: 3rem;
+  background-color: var(--clr-dark-cyan);
+}
+
+article:first-child {
+  background-color: var(--clr-bright-orange);
+  border-radius: 0.3125rem 0.3125rem 0 0;
+}
+
+article:last-child {
+  background-color: var(--clr-vry-dark-cyan);
+  border-radius: 0 0 0.3125rem 0.3125rem;
+}
+
+img {
+  padding-bottom: 1.875rem;
+}
+
+.heading {
+  font-family: var(--font-big-shoulders);
+  color: var(--clr-heading-gray);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  padding: 0;
+  padding-bottom: 1.625rem;
+}
+
+.description {
+  color: var(--clr-para-white);
+  mix-blend-mode: lighten;
+  padding-bottom: 1.625rem;
+  line-height: 1.65;
+}
+
+button {
+  padding: 0.75rem 1.65rem;
+  border-radius: 2rem;
+  font-family: var(--font-lexend);
+  font-size: 1rem;
+  text-transform: capitalize;
+  background-color: var(--clr-heading-gray);
+  border: var(--clr-heading-gray) 2px solid;
+  mix-blend-mode: screen;
+}
+
+button:active,
+button:focus,
+button:hover {
+  cursor: pointer;
+  background: none;
+  color: var(--clr-para-white);
+}
+
+@media screen and (min-width: 71.875em) {
+  .flex {
+    flex-wrap: nowrap;
+  }
+
+  section {
+    max-width: 65%;
+  }
+
+  .description {
+    padding-bottom: 5.3125rem;
+  }
+
+  article:first-child {
+    border-radius: 0.3125rem 0 0 0.3125rem;
+  }
+
+  article:last-child {
+    border-radius: 0 0.3125rem 0.3125rem 0;
+  }
+}
